@@ -7,7 +7,7 @@ My code for the [Build a Todoist clone in React](https://www.youtube.com/watch?v
 - JavaScript
 - React
 - Firebase
-- React Tesying Library
+- React Testing Library
 
 ## Setup
 `npm start`
