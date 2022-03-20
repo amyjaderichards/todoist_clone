@@ -6,8 +6,10 @@ My code for the [Build a Todoist clone in React](https://www.youtube.com/watch?v
 ## Languages/Framework Used
 - JavaScript
 - React
+- Sass 
 - Firebase
 - React Testing Library
+- Performance testing with Lighthouse
 
 ## Setup
 `npm start`
