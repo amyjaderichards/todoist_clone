@@ -15,7 +15,7 @@ export const useTasks = (selectedProject) => {
       .where('userId', '==', '123456');
 
     unsubscribe = selectedProject && !collatedTasksExist(selectedProject)
-      ? (unsubscribe = unsubscribe.where('projectId', '==', 'selectedProject'))
+      ? (unsubscribe = unsubscribe.where('projectId', '==', selectedProject))
       : selectedProject === 'TODAY'
         ? (unsubscribe = unsubscribe.where('date', '==', moment().format('DD/MM/YYYY')))
         : selectedProject === 'INBOX' || selectedProject === 0
@@ -60,7 +60,7 @@ export const useProjects = () => {
         const allProjects = snapshot.docs.map((project) => ({
           ...project.data(),
           docId: project.id,
-        }));
+        })); // currently empty
 
         if (JSON.stringify(allProjects) !== JSON.stringify(projects)) {
           setProjects(allProjects);
