@@ -1,12 +1,16 @@
+/* eslint-disable react/function-component-definition */
 import React from 'react';
 import { Header } from './components/layout/Header';
 import { Content } from './components/layout/Content';
+import { ProjectsProvider, SelectedProjectProvider } from './context';
 
-export function App() {
-  return (
-    <div className="App">
-      <Header />
-      <Content />
-    </div>
-  );
-}
+export const App = () => (
+  <SelectedProjectProvider>
+    <ProjectsProvider>
+      <div className="App">
+        <Header />
+        <Content />
+      </div>
+    </ProjectsProvider>
+  </SelectedProjectProvider>
+);
