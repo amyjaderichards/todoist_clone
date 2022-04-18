@@ -6,7 +6,7 @@ import { useTasks } from '../hooks';
 export const Tasks = () => {
   const { tasks } = useTasks('1');
 
-  console.log(tasks); // empty
+  console.log('!!!!!TASKS!!!!!!', tasks); // empty
 
   const projectName = '';
 
