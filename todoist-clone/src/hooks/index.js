@@ -9,7 +9,7 @@ export const useTasks = (selectedProject) => {
   const [archivedTasks, setArchivedTasks] = useState([]);
 
   useEffect(() => {
-    let unsubscribe = firebase
+    let unsubscribe = firebase 
       .firestore()
       .collection('tasks')
       .where('userId', '==', '123456');
@@ -24,8 +24,8 @@ export const useTasks = (selectedProject) => {
 
     unsubscribe = unsubscribe.onSnapshot((snapshot) => {
       const newTasks = snapshot.docs.map((task) => ({
-        id: task.id,
         ...task.data(),
+        id: task.id,
       }));
 
       setTasks(

@@ -1,8 +1,9 @@
+/* eslint-disable react/function-component-definition */
 import React, { createContext, useContext, useState } from 'react';
 
 export const SelectedProjectContext = createContext();
 
-export function SelectedProjectProvider({ children }) {
+export const SelectedProjectProvider = ({ children }) => {
   const [selectedProject, setSelectedProject] = useState('INBOX');
 
   return (
@@ -11,6 +12,6 @@ export function SelectedProjectProvider({ children }) {
       {children}
     </SelectedProjectContext.Provider>
   );
-}
+};
 
 export const useSelectedProjectValue = () => useContext(SelectedProjectContext);
