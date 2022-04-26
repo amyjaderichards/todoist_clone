@@ -1,17 +1,24 @@
 Started 20/03
 
-20th March
 - Setup and basic create-react-app boilerplate
 11:39
 
 * Reinstall prettier, had some weird clash so I uninstalled the entire package 
 
-* COmponents get uppercase names 
+* Components get uppercase names 
 * data-test-id for the react testing library
 
 TODO -
-* logo.png not showing 
-* Need to do an npm install react-icons/fa to get the pizza icon (font awesome icons)
 * Normalize gets rid of all the browser-set padding and margins etc. 
 * BEM - block, element, modifier
 * 31:28
+
+* 2:11:45
+
+Some styling issues on the AddTask dropdown
+
+Check for console logs 
+
+DarkMode isn't changing colour - fix this!
+
+3:29:37

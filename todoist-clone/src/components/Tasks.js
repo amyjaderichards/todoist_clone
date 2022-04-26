@@ -14,10 +14,11 @@ export const Tasks = () => {
 
   let projectName = '';
 
-  console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!', projects); // Array of length 1
-  console.log('################', selectedProject); // was 1 now INBOX
+  // console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!', projects); // Array of length 1
+  // console.log('################', selectedProject); // was 1 now INBOX
 
-  console.log('OUTPUT:', getTitle(projects, '1'));
+  // console.log('GET TITLE OUTPUT:', getTitle(projects, '1'));
+  // console.log('GET COLLATED TITLE OUTPUT:', getCollatedTitle(projects, '1'));
 
   if (collatedTasksExist(selectedProject) && selectedProject) {
     projectName = getCollatedTitle(collatedTasks, selectedProject).name;

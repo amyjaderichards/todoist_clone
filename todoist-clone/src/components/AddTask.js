@@ -4,9 +4,10 @@
 import React, { useState } from 'react';
 import { FaRegListAlt, FaRegCalendarAlt } from 'react-icons/fa';
 import moment from 'moment';
-import { firebase } from 'firebase';
+import { firebase } from '../firebase';
 import { useSelectedProjectValue } from '../context';
 import { ProjectOverlay } from './ProjectOverlay';
+import { TaskDate } from './TaskDate';
 
 export const AddTask = ({
   showAddTaskMain = true,
@@ -34,6 +35,11 @@ export const AddTask = ({
         .add(7)
         .format('DD/MM/YYYY');
     }
+
+    console.log('ADDTASK PROJECT ID: ', projectId);
+    console.log('ADDTASK COLLATED DATE: ', collatedDate);
+    console.log('ADDTASK TASKDATE: ', taskDate);
+
     return (
       task
       && projectId
@@ -94,7 +100,11 @@ export const AddTask = ({
             showProjectOverlay={showProjectOverlay}
             setShowProjectOverlay={setShowProjectOverlay}
           />
-          <p>TaskDate here</p>
+          <TaskDate
+            setTaskDate={setTaskDate}
+            showTaskDate={showTaskDate}
+            setShowTaskDate={setShowTaskDate}
+          />
           <input
             className="add-task__content"
             data-testid="add-task-content"
