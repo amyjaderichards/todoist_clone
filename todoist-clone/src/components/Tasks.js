@@ -12,30 +12,29 @@ export const Tasks = () => {
   const { projects } = useProjectsValue();
   const { tasks } = useTasks(selectedProject);
 
-  const projectName = '';
+  let projectName = '';
 
   console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!', projects); // Array of length 1
   console.log('################', selectedProject); // was 1 now INBOX
 
-  console.log('OUTPUT', getTitle(projects, selectedProject)); // This is where it's breaking, selected project seems to be Inbox not Music?
-  console.log('OUTPUT:', getTitle(projects, 1));
+  console.log('OUTPUT:', getTitle(projects, '1'));
 
-  // if (collatedTasksExist(selectedProject) && selectedProject) {
-  //   projectName = getCollatedTitle(collatedTasks, selectedProject).name;
-  // }
+  if (collatedTasksExist(selectedProject) && selectedProject) {
+    projectName = getCollatedTitle(collatedTasks, selectedProject).name;
+  }
 
-  // if (
-  //   projects
-  //   && projects.length > 0
-  //   && selectedProject
-  //   && !collatedTasksExist(selectedProject)
-  // ) {
-  //   projectName = getTitle(projects, selectedProject).name;
-  // }
+  if (
+    projects
+    && projects.length > 0
+    && selectedProject
+    && !collatedTasksExist(selectedProject)
+  ) {
+    projectName = getTitle(projects, selectedProject).name;
+  }
 
-  // useEffect(() => {
-  //   document.title = `${projectName}: Todoist`;
-  // });
+  useEffect(() => {
+    document.title = `${projectName}: Todoist`;
+  });
 
   return (
     <div className="tasks" data-testid="tasks">
