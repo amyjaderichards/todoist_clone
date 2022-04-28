@@ -14,11 +14,7 @@ export const Projects = ({ activeValue = null }) => {
         key={project.projectId}
         data-doc-id={project.docId}
         data-test-id="project-action-parent"
-        className={
-          active === project.projectId
-            ? 'active sidebar__project'
-            : 'sidebar__project'
-          }
+        className={active === project.projectId ? 'active sidebar__project' : 'sidebar__project'}
       >
         <div
           role="button"
