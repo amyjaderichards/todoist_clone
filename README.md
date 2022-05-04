@@ -9,7 +9,7 @@ My code for the [Build a Todoist clone in React](https://www.youtube.com/watch?v
 - Sass 
 - Firebase
 - React Testing Library
-- Performance testing with Lighthouse
+- Accessibility and performance testing with Lighthouse
 
 ## Setup
 `npm start`

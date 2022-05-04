@@ -23,11 +23,11 @@ export const Sidebar = () => {
             data-testid="inbox-action"
             aria-label="Show inbox tasks"
             tabIndex={0}
+            role="button"
             onClick={() => {
               setActive('inbox');
               setSelectedProject('INBOX');
             }}
-            role="button"
             onKeyDown={(e) => {
               if (e.key === 'Enter') {
                 setActive('inbox');

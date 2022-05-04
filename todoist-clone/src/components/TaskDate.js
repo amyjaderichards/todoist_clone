@@ -1,53 +1,74 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable react/function-component-definition */
 import React from 'react';
 import { FaRegPaperPlane, FaSpaceShuttle, FaSun } from 'react-icons/fa';
 import moment from 'moment';
 
-export const TaskDate = ({ setTaskDate, showTaskDate, setShowTaskDate }) => {
-  const x = 1;
-
-  return showTaskDate && (
-    <div className="task-date" data-testid="task-date-overlay">
-      <ul className="task-date__list">
-        <li
+export const TaskDate = ({ setTaskDate, showTaskDate, setShowTaskDate }) => showTaskDate && (
+  <div className="task-date" data-testid="task-date-overlay">
+    <ul className="task-date__list">
+      <li data-testid="task-date-overlay">
+        <div
           onClick={() => {
             setShowTaskDate(false);
             setTaskDate(moment().format('DD/MM/YYYY'));
           }}
-          data-testid="task-date-overlay"
+          onKeyDown={() => {
+            setShowTaskDate(false);
+            setTaskDate(moment().format('DD/MM/YYYY'));
+          }}
+          tabIndex={0}
+          role="button"
         >
-          <span>
-            <FaSpaceShuttle />
-          </span>
-          <span>Today</span>
-        </li>
-        <li
+          <div>
+            <span>
+              <FaSpaceShuttle />
+            </span>
+            <span>Today</span>
+          </div>
+        </div>
+      </li>
+      <li data-testid="task-date-tomorrow">
+        <div
           onClick={() => {
             setShowTaskDate(false);
             setTaskDate(moment().add(1, 'day').format('DD/MM/YYYY'));
           }}
-          data-testid="task-date-tomorrow"
+          onKeyDown={() => {
+            setShowTaskDate(false);
+            setTaskDate(moment().add(1, 'day').format('DD/MM/YYYY'));
+          }}
+          tabIndex={0}
+          role="button"
         >
-          <span>
-            <FaSun />
-          </span>
-          <span>Tomorrow</span>
-        </li>
-        <li
+          <div>
+            <span>
+              <FaSun />
+            </span>
+            <span>Tomorrow</span>
+          </div>
+        </div>
+      </li>
+      <li data-testid="task-date-next-week">
+        <div
           onClick={() => {
             setShowTaskDate(false);
             setTaskDate(moment().add(7, 'days').format('DD/MM/YYYY'));
           }}
-          data-testid="task-date-next-week"
+          onKeyDown={() => {
+            setShowTaskDate(false);
+            setTaskDate(moment().add(7, 'days').format('DD/MM/YYYY'));
+          }}
+          tabIndex={0}
+          role="button"
         >
-          <span>
-            <FaRegPaperPlane />
-          </span>
-          <span>Next Week</span>
-        </li>
-      </ul>
-    </div>
-  );
-};
+          <div>
+            <span>
+              <FaRegPaperPlane />
+            </span>
+            <span>Next Week</span>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+);

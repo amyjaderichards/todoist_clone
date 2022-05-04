@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { useState } from 'react';
 import { useProjectsValue, useSelectedProjectValue } from '../context';
 import { IndividualProject } from './IndividualProject';
