@@ -14,7 +14,9 @@ My code for the [Build a Todoist clone in React](https://www.youtube.com/watch?v
 ## Setup
 `npm start`
 
-## ToDo
-- Project not finished
-- Accessibility
+
+## Running Tests
+`npm run test`
+
+
 
