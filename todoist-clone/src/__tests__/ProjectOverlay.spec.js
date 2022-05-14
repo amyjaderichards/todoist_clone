@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent, cleanup } from '@testing-library/react';
-import { ProjectOverlay } from '../components/ProjectOverlay';
 import { useProjectsValue } from '../context';
+import { ProjectOverlay } from '../components/ProjectOverlay';
 
 beforeEach(cleanup);
 

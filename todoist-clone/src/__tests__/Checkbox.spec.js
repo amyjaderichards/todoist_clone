@@ -23,21 +23,20 @@ describe('<Checkbox>', () => {
       expect(queryByTestId('checkbox-action')).toBeTruthy();
     });
 
-    it.skip('renders the task checkbox and accepts an onClick', () => {
-      const { queryByTestId } = render(<Checkbox id="1" taskDesc="Finish this tutorial series!" />);
-      expect(queryByTestId('checkbox-action')).toBeTruthy();
-      fireEvent.click(queryByTestId('checkbox-action'));
-      // TODO: this one is failing? :S
-    });
-
     it('renders the task checkbox and accepts an onKeyDown', () => {
       const { queryByTestId } = render(<Checkbox id="1" taskDesc="Finish this tutorial series!" />);
       expect(queryByTestId('checkbox-action')).toBeTruthy();
       fireEvent.keyDown(queryByTestId('checkbox-action'));
     });
-  });
 
-  describe.skip('Failure', () => {
-    // TODO: add failure case
+    it.skip('renders the task checkbox and accepts an onClick', () => {
+      const { queryByTestId, debug } = render(<Checkbox id="1" taskDesc="Finish this tutorial series!" />);
+      expect(queryByTestId('checkbox-action')).toBeTruthy();
+      console.log('!!!!!!!', queryByTestId);
+      fireEvent.click(queryByTestId('checkbox-action'));
+
+      debug();
+      // TODO: this one is failing? :S
+    });
   });
 });
