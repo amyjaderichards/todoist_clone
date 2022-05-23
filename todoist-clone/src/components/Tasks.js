@@ -8,7 +8,7 @@ import { useSelectedProjectValue, useProjectsValue } from '../context';
 import { AddTask } from './AddTask';
 
 export const Tasks = () => {
-  const { selectedProject } = useSelectedProjectValue();
+  const { selectedProject } = useSelectedProjectValue() || {};
   const { projects } = useProjectsValue();
   const { tasks } = useTasks(selectedProject);
 

@@ -20,8 +20,6 @@ jest.mock('../firebase', () => ({
   },
 }));
 
-// TODO: all tests failing due to 'ypeError: Cannot destructure property 'projects' of '(0 , _context.useProjectsValue)(...)' as it is undefined.'
-
 describe.skip('<AddTask />', () => {
   afterEach(() => {
     jest.clearAllMocks();

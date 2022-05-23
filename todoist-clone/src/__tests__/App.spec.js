@@ -4,7 +4,7 @@ import { App } from '../App';
 
 beforeEach(cleanup);
 
-describe.skip('<App />', () => {
+describe('<App />', () => {
   it('renders the application', () => {
     const { queryByTestId } = render(<App />);
     expect(queryByTestId('application')).toBeTruthy();

@@ -20,9 +20,7 @@ export const AddTask = ({
   const [showProjectOverlay, setShowProjectOverlay] = useState(false);
   const [showTaskDate, setShowTaskDate] = useState(false);
 
-  const { selectedProject } = useSelectedProjectValue();
-
-  console.log('!!!!!!!!!!!!', selectedProject);
+  const { selectedProject } = useSelectedProjectValue() || {};
 
   const addTask = () => {
     const projectId = project || selectedProject;
@@ -45,7 +43,7 @@ export const AddTask = ({
           projectId,
           task,
           date: collatedDate || taskDate,
-          userId: '123456',
+          userId: 'jlIFXIwyAL3tzHMtzRbw',
         })
         .then(() => {
           setTask('');
