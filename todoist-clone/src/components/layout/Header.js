@@ -16,10 +16,10 @@ export const Header = ({ darkMode, setDarkMode }) => {
         <div className="settings">
           <ul>
             <li
-              data-testid="quick-add-task-action"
               className="settings__add"
             >
               <button
+                data-testid="quick-add-task-action"
                 aria-label="Quick Add Task"
                 type="button"
                 onClick={() => {
