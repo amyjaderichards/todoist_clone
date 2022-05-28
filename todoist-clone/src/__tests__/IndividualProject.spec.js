@@ -42,7 +42,7 @@ describe('<IndividualProject />', () => {
     docId: 'hello-there',
   };
 
-  describe.skip('Success', () => {
+  describe('Success', () => {
     it('renders our project', () => {
       const { getByText } = render(<IndividualProject project={project} />);
       expect(getByText('TEST PROJECT NAME')).toBeTruthy();
