@@ -18,7 +18,7 @@ jest.mock('../context', () => ({
   }))
 }));
 
-describe.skip('<ProjectOverlay />', () => {
+describe('<ProjectOverlay />', () => {
   afterEach(() => {
     jest.clearAllMocks();
   });
