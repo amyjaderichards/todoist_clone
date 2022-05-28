@@ -16,7 +16,7 @@ jest.mock('../firebase', () => ({
   },
 }));
 
-describe.skip('<Checkbox />', () => {
+describe('<Checkbox />', () => {
   describe('Success', () => {
     it('renders the task checkbox', () => {
       const { queryByTestId } = render(
@@ -25,7 +25,7 @@ describe.skip('<Checkbox />', () => {
       expect(queryByTestId('checkbox-action')).toBeTruthy();
     });
 
-    it('renders the task checkbox and accepts a onClick', () => {
+    it('renders the task checkbox and accepts an onClick', () => {
       const { queryByTestId } = render(
         <Checkbox id="1" taskDesc="Finish this tutorial series!" />
       );
@@ -33,7 +33,7 @@ describe.skip('<Checkbox />', () => {
       fireEvent.click(queryByTestId('checkbox-action'));
     });
 
-    it('renders the task checkbox and accepts a onKeyDown', () => {
+    it('renders the task checkbox and accepts an onKeyDown', () => {
       const { queryByTestId } = render(
         <Checkbox id="1" taskDesc="Finish this tutorial series!" />
       );
